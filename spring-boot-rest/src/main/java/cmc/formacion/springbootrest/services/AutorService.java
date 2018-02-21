@@ -2,10 +2,7 @@ package cmc.formacion.springbootrest.services;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import cmc.formacion.springbootrest.domain.Autor;
-import cmc.formacion.springbootrest.domain.Libro;
 import cmc.formacion.springbootrest.exception.NotFoundException;
 
 public interface AutorService {

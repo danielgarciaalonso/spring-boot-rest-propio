@@ -1,6 +1,5 @@
 package cmc.formacion.springbootrest;
 
-import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 
@@ -8,11 +7,8 @@ import org.springframework.boot.SpringApplication;
 // http://start.spring.io/
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 
-import cmc.formacion.springbootrest.domain.Autor;
 import cmc.formacion.springbootrest.repository.AutorRepository;
 import cmc.formacion.springbootrest.repository.LibroRepository;
 
