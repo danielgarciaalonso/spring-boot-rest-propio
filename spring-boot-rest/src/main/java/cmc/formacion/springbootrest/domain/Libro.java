@@ -3,6 +3,7 @@ package cmc.formacion.springbootrest.domain;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Libro {
 	@NotNull
 	private String titulo;
 	
-	@ManyToMany(mappedBy = "libros")
+	@ManyToMany(mappedBy = "libros", fetch = FetchType.EAGER)
 	private List<Autor> autores;
 
 	public Long getId() {
