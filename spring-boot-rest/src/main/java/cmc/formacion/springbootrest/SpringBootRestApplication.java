@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import cmc.formacion.springbootrest.repository.AutorRepository;
+import cmc.formacion.springbootrest.repository.LibroRepository;
 
 @SpringBootApplication
 public class SpringBootRestApplication {
@@ -23,9 +24,11 @@ public class SpringBootRestApplication {
 	}
 	
 	@Bean
-	CommandLineRunner runner (AutorRepository autorRepository) {
+	CommandLineRunner runner (AutorRepository autorRepository, LibroRepository libroRepository) {
 		return args -> {
 			System.out.println(autorRepository.findAll().toString());
+			
+			System.out.println(autorRepository.findByLibros_Titulo("Mastering AngularJS"));
 		};
 	}
 }

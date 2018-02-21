@@ -10,5 +10,5 @@ import cmc.formacion.springbootrest.domain.Autor;
 @Repository
 public interface AutorRepository extends JpaRepository<Autor, Long> {
 
-	List<Autor> findByLibrosTitulo(String titulo);
+	List<Autor> findByLibros_Titulo(String titulo);
 }
