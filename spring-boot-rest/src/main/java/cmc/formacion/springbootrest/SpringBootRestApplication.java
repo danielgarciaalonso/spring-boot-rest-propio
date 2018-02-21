@@ -26,6 +26,8 @@ public class SpringBootRestApplication {
 		// localhost/8080/h2-console/  
 		// puerto 8080 por defecto
 		
+		// postman para ver el apirest
+		
 	}
 	
 	@Bean
