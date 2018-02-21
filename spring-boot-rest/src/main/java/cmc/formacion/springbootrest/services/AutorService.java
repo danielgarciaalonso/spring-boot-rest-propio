@@ -6,16 +6,17 @@ import org.springframework.stereotype.Service;
 
 import cmc.formacion.springbootrest.domain.Autor;
 import cmc.formacion.springbootrest.domain.Libro;
+import cmc.formacion.springbootrest.exception.NotFoundException;
 
 public interface AutorService {
 
 	List<Autor> findAll();
 	
-	Autor findOne(Long id);
+	Autor findOne(Long id) throws NotFoundException;
 	
 	void save(Autor autor);
 	
-	void update (Long id, Autor autor);
+	void update (Long id, Autor autor) throws NotFoundException;
 	
 	void delete (Long id);
 	
