@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import cmc.formacion.springbootrest.domain.Autor;
+import cmc.formacion.springbootrest.domain.Libro;
 
 public interface AutorService {
 
@@ -17,4 +18,6 @@ public interface AutorService {
 	void update (Long id, Autor autor);
 	
 	void delete (Long id);
+	
+	List<Autor> findByBookTittle(String titulo);
 }
