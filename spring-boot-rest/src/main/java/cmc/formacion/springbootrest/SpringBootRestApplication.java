@@ -4,7 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 
 // Creacion automatica de un proyecto spring
-// http://start.spring.io/
+// http://start.spring.io/  web jpa h2
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
