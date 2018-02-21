@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class Autor {
 	
 	private String direccion;
 
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	// Como es una relacion many2many hace falta crear una tabla intermedia
 	// que relacione los id de una tabla con los de la otra y viceversa
 	@JoinTable(name = "autor_libro", 
@@ -62,6 +63,11 @@ public class Autor {
 
 	public void setLibros(List<Libro> libros) {
 		this.libros = libros;
+	}
+
+	@Override
+	public String toString() {
+		return "Autor [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + ", libros=" + libros + "]";
 	}
 	
 	
