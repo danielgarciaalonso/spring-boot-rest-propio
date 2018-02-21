@@ -1,6 +1,10 @@
 package cmc.formacion.springbootrest;
 
 import org.springframework.boot.SpringApplication;
+
+// Creacion automatica de un proyecto spring
+// http://start.spring.io/
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
