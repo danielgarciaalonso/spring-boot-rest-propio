@@ -25,6 +25,28 @@ public class Autor {
 	
 	private String direccion;
 
+	
+
+	public Autor() {
+		super();
+	}
+
+	public Autor(Long id, String nombre) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+
+	public Autor(Long id, String nombre, String direccion, List<Libro> libros) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.libros = libros;
+	}
+
+
+
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	// Como es una relacion many2many hace falta crear una tabla intermedia
 	// que relacione los id de una tabla con los de la otra y viceversa
