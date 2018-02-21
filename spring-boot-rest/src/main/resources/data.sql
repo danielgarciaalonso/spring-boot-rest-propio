@@ -1,0 +1,1 @@
+insert into autor(nombre, direccion) values ('John Papa', 'Angular Street');
