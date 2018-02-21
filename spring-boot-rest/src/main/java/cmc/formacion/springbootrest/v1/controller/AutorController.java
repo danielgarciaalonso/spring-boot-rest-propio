@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import cmc.formacion.springbootrest.domain.Autor;
+import cmc.formacion.springbootrest.exception.NotFoundException;
 import cmc.formacion.springbootrest.services.AutorService;
 import cmc.formacion.springbootrest.v1.mapper.AutorMapper;
 import cmc.formacion.springbootrest.v1.model.AutorDTO;
@@ -48,7 +49,7 @@ public class AutorController {
 	}
 	
 	@GetMapping(path = "/{id}")
-	public AutorDTO getAutorById(@PathVariable Long id) {
+	public AutorDTO getAutorById(@PathVariable Long id) throws NotFoundException {
 		return autorMapper.convertAutorToAutorDTO(autorService.findOne(id));
 		
 	}
@@ -73,7 +74,7 @@ public class AutorController {
 	}
 	
 	@PutMapping(path = "/{id}")
-	public void updateAutor(@PathVariable Long id, @RequestBody AutorDTO dto) {
+	public void updateAutor(@PathVariable Long id, @RequestBody AutorDTO dto) throws NotFoundException {
 		autorService.update(id, autorMapper.convertAutorDTOToAutor(dto));
 	}
 	
