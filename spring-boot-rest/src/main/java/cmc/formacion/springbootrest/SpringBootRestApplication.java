@@ -31,11 +31,11 @@ public class SpringBootRestApplication {
 	@Bean
 	CommandLineRunner runner (AutorRepository autorRepository, LibroRepository libroRepository) {
 		return args -> {
-			System.out.println(autorRepository.findAll().toString());
+			//System.out.println(autorRepository.findAll().toString());
 			
-			System.out.println(autorRepository.findByLibros_Titulo("Mastering AngularJS"));
+			//System.out.println(autorRepository.findByLibros_Titulo("Mastering AngularJS"));
 			
-			System.out.println(autorRepository.findOne((long) 1));
+			//System.out.println(autorRepository.findOne((long) 1));
 		};
 	}
 }
