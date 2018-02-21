@@ -5,6 +5,10 @@ public class AutorDTO {
 	private Long id;
 	
 	private String nombre;
+	
+	public AutorDTO() {
+		super();
+	}
 
 	public AutorDTO(Long id, String nombre) {
 		super();
