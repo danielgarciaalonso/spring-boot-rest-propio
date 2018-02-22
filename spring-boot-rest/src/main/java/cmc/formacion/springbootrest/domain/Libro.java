@@ -20,6 +20,17 @@ public class Libro {
 	@NotNull
 	private String titulo;
 	
+	public Libro() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Libro(Long id, String titulo) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+	}
+
 	@ManyToMany(mappedBy = "libros", fetch = FetchType.EAGER)
 	private List<Autor> autores;
 

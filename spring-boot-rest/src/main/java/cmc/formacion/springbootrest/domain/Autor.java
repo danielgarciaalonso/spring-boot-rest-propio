@@ -25,8 +25,6 @@ public class Autor {
 	
 	private String direccion;
 
-	
-
 	public Autor() {
 		super();
 	}
